@@ -8,35 +8,81 @@ import sys
 secret_word = "food"
 
 # Task 1
+
 def check_text():
-    """ Add your docstring """
-    pass
-
-
+    #docstring
+    while True:
+         text = str(input("Give me a sentence: "))
+         if secret_word in text:
+             print("You used the secret word!")
+             break
+         if  "dog" in text or "Dog" in text:
+             print("You used the word \"dog\" or the word \"Dog\"!")
+             break
+         else:
+            print("Try again")
+            continue
 
 # Task 2
+
 def check_greater():
-    """ Add your docstring """
-    pass
-
-
+    #Add your docstring
+    while True:
+        int1 = int(input("give me an integer: "))
+        int2 = int(input("give me another integer: "))
+        if int1>int2:
+            print("First is Greater")
+            break
+        if int2>int1:
+            print ("Second is Greater")
+            break
+        else:
+            print ("Try again")
+            continue
+    print("Done")
 
 # Task 3
 def get_special_numbers():
-    """ Add your docstring """
-    pass
-
+    #Add your docstring 
+    x = 1
+    while x in range (1,41):
+        if x%2 == 0 or  x%3 != 0 or x%5 == 0:
+            x+=1
+            continue
+        else:
+            print(x)
+            x+=1 
 
 # Task 4.a
 def my_for_loop():
-    """ Add your docstring """
-    pass
-
+    #Add your docstring
+    string = str(input("give me a string: "))
+    while True:
+        if len(string) in range (2,6):
+            print("bad word")
+        if " " in string:
+              print("bad word")
+    while char in string:
+        if char in "aeiouAEIOU":
+            print(f"{char} is a vowel")
+        else:  
+            print(f"{char} is a consonant")
+            
 # Task 4.b
 def my_while_loop():
-    """ Add your docstring """
-    pass
-
+    while True:
+        letter=str(input("choose one option: a, b, or c: "))
+        if letter == "a":
+            continue
+        elif letter == "b":
+            print("Goodbye")
+        elif letter == "c":
+            exit()
+        else:
+            print("try again")
+            continue
+        break
+        
 # ---------------------------------------
 # Do not modify anything below this line
 # ---------------------------------------
@@ -54,6 +100,9 @@ def main():
 
     # Task 4 calls
     my_for_loop()
+    
+    my_for_loop()
+    
     my_while_loop()
 
 if __name__ == "__main__":
