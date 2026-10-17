@@ -39,7 +39,6 @@ def check_greater():
         else:
             print ("Try again")
             continue
-    print("Done")
 
 # Task 3
 def get_special_numbers():
@@ -56,17 +55,21 @@ def get_special_numbers():
 # Task 4.a
 def my_for_loop():
     #Add your docstring
-    string = str(input("give me a string: "))
     while True:
-        if len(string) in range (2,6):
+        string = str(input("give me a string: "))
+        if len(string) not in range (2,6):
             print("bad word")
+            return
         if " " in string:
               print("bad word")
-    while char in string:
-        if char in "aeiouAEIOU":
-            print(f"{char} is a vowel")
-        else:  
-            print(f"{char} is a consonant")
+              return
+        else:
+            for char in string:
+                if char in "aeiouAEIOU":
+                    print(f"letter {char} is a vowel")
+                else:  
+                    print(f"letter {char} is a consonant")
+            break
             
 # Task 4.b
 def my_while_loop():
@@ -100,9 +103,6 @@ def main():
 
     # Task 4 calls
     my_for_loop()
-    
-    my_for_loop()
-    
     my_while_loop()
 
 if __name__ == "__main__":
