@@ -1,7 +1,7 @@
 # ------------------------------------------------------
-#        Name: (put your name here)
-#       Peers: (add any collaborators)
-#  References: (anything you checked to solve this)
+#        Name: Ruby Tricca
+#       Peers: none
+#  References: My notes
 # ------------------------------------------------------
 import sys
 
@@ -10,7 +10,7 @@ secret_word = "food"
 # Task 1
 
 def check_text():
-    #docstring
+    #takes a string as input and determines whether it contains secret_word or the word dog
     while True:
          text = str(input("Give me a sentence: "))
          if secret_word in text:
@@ -26,7 +26,7 @@ def check_text():
 # Task 2
 
 def check_greater():
-    #Add your docstring
+    #ask the user to input two integers and determines which is greater
     while True:
         int1 = int(input("give me an integer: "))
         int2 = int(input("give me another integer: "))
@@ -42,7 +42,7 @@ def check_greater():
 
 # Task 3
 def get_special_numbers():
-    #Add your docstring 
+    #prints all numbers between 1 and 40 that are not divisible by 2 or 5 and are divisible by 3 
     x = 1
     while x in range (1,41):
         if x%2 == 0 or  x%3 != 0 or x%5 == 0:
@@ -54,7 +54,8 @@ def get_special_numbers():
 
 # Task 4.a
 def my_for_loop():
-    #Add your docstring
+    #asks user to input  string. if string is between 2 and 5 characters and has no spaces,
+    #it prints whether each character is a consonant or a vowel
     while True:
         string = str(input("give me a string: "))
         if len(string) not in range (2,6):
@@ -73,6 +74,7 @@ def my_for_loop():
             
 # Task 4.b
 def my_while_loop():
+#asks user for an input (a,b, or c) and decides whether to re-enter the loop, print goodbye, or exit the loop
     while True:
         letter=str(input("choose one option: a, b, or c: "))
         if letter == "a":
